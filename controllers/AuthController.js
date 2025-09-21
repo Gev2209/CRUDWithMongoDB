@@ -1,3 +1,5 @@
+const { Schema } = require("../schema/Schema")
+
 class AuthController {
     async getUsers (req, res) {
         const users = await req.app.locals.services.users.getUsers()
@@ -14,7 +16,8 @@ class AuthController {
     res.render('product')
    } 
     async postRegister (req, res) {
-        await req.app.locals.services.users.postRegister(req.body)
+        const validator = await Schema.validateAsync(req.body);
+        await req.app.locals.services.users.postRegister(validator)
         res.redirect('/auth/login')
     }
 
