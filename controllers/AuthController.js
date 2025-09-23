@@ -3,7 +3,7 @@ const { Schema } = require("../schema/Schema")
 class AuthController {
     async getUsers (req, res) {
         const users = await req.app.locals.services.users.getUsers()
-        res.render('users', {users})
+        res.render('index', {title: 'express',users})
     }
     async getRegister (req, res) {
         res.render('register')

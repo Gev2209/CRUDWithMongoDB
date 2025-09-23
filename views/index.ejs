@@ -3,16 +3,49 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
-    <ul>
-      <li><a href="http://localhost:3000/users">All Users</a></li>
+      <div class="header_lists">
+        <ul>
+          <li><a href="http://localhost:3000/users"><i class="fa-regular fa-circle-user"></i></a></li>
+        </ul>
+        <ul>
+      <li><a href="http://localhost:3000/users"><i class="fa-solid fa-basket-shopping"></i></a></li>
       <li><a class="line" href=""></a></li>
       <li><a href="http://localhost:3000/auth/login">Login</a></li>
       <li><a href="http://localhost:3000/auth/register">Regitration</a></li>
     </ul>
+      </div>
   </header>
-    
+
+    <div class="main_picture">
+      <i class="fa-solid fa-arrow-left"></i>
+      <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <section id="shop_boxes">
+        <div class="main_product">
+          
+          <% users.forEach((e) => {%>
+          <div class="products">
+            <li><%=e.name%></li>
+            <li><%=e.email%></li>
+            <hr>
+            <div class="shop_product">
+              
+            </div>
+            <hr>
+            <div class="shop_btn">
+                <a class="buy_now">Buy now</a>
+                <a class="to_card">Add to card</a>
+            </div>
+          </div>
+        <%})%>
+      </div>
+      </section>
   </body>
 </html>

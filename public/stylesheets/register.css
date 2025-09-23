@@ -38,7 +38,11 @@ form > button {
     filter: opacity(0.7);
     transition: all ease .3s;
     &:hover {
-        filter: opacity(1);
-               
+        filter: opacity(1);               
     }
+}
+
+
+.fa-eye {
+    color: black;
 }

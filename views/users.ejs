@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/users.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Document</title>
 </head>
 <body>
     <header>
+
     <ul>
-      <li><a href="http://localhost:3000/users">All Users</a></li>
+      <li><a href="http://localhost:3000/">Home</a></li>
       <li><a class="line" href=""></a></li>
       <li><a href="http://localhost:3000/auth/login">Login</a></li>
       <li><a href="http://localhost:3000/auth/register">Regitration</a></li>
     </ul>
   </header>
+  <main>
     <% users.forEach((e) => {%>
     <div class="client_box">
         <li><%=e.name%></li>
         <li><%=e.email%></li>
     <%})%>
     </div>
+    </main>
 </body>
 </html>

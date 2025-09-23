@@ -10,13 +10,15 @@ const mongoose = require('mongoose');
 const AuthServices = require('./services/authServices');
 const model = require('./model/authModel');
 const authRouter = require('./routes/auth');
-mongoose.connect('mongodb+srv://Gevorg:098070821gM@cluster0.ykjkgwv.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0')
+
+mongoose.connect('mongodb+srv://Gevorg:55555@cluster0.ykjkgwv.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     console.log('DB is connected');
   })
   .catch((err) => {
     console.log(err)
   })
+
 var app = express();
 
 app.locals.model = {

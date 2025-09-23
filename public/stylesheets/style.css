@@ -1,18 +1,19 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: rgba(183, 183, 183, 0.638);
 }
 li {
   list-style: none;
 }
 li > a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 header {
-  padding: 10px 0 10px 0;
+  /* padding: 5px 0 5px 0; */
   width: 100%;
-  background: #000;
+  background: #ffffff;
 }
 
 ul {
@@ -24,5 +25,94 @@ ul {
 
 .line {
   padding: 1px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
 }
+
+
+.main_picture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('https://wudless.com/wp-content/uploads/2022/05/WALLPAPERS-.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  width: 800px;  
+  padding: 50px;
+  margin: auto;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all ease 0.1s;
+  &:hover {
+    opacity: 1;
+  }
+  
+}
+
+.header_lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-circle-user {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+
+.main_product {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 350px);
+  margin: 20px;
+  text-align: center;
+  gap: 10px;
+}
+
+.products {
+  background-color: rgba(0, 43, 31, 0.359);
+  border-radius: 5px;
+}
+
+.shop_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 30vh; */
+}
+.shop_btn > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.to_card {
+  background-color: brown;
+}
+
+.buy_now {
+  background-color: chocolate;
+}
+
+.to_card, .buy_now {
+  cursor: pointer;
+}
+.shop_product {
+  background-image: url(https://wudless.com/wp-content/uploads/2022/05/WALLPAPERS-.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  margin: auto;
+  height: 230px;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+

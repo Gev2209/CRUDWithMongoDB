@@ -1,8 +1,9 @@
 var express = require('express');
+const AuthController = require('../controllers/authController');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const authController = new AuthController()
+
+router.get('/', authController.getUsers);
 
 module.exports = router;
