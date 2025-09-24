@@ -23,4 +23,4 @@ usersSchema.pre('save', async function (next) {
   next()
 })
 
-module.exports = model('users', usersSchema);
+module.exports = model('products', usersSchema);

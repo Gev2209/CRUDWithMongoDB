@@ -10,6 +10,8 @@ const mongoose = require('mongoose');
 const AuthServices = require('./services/authServices');
 const model = require('./model/authModel');
 const authRouter = require('./routes/auth');
+const userRoutes = require('./routes/user');
+const loggedRoute = require('./routes/loggedRoute');
 
 mongoose.connect('mongodb+srv://Gevorg:55555@cluster0.ykjkgwv.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
@@ -43,7 +45,8 @@ app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/auth', authRouter);
 app.use('/', authRouter);
-
+app.use('/api',userRoutes);
+app.use('/',loggedRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.fa-circle-user {
+    font-size: 500px;
+    font-weight: 100;
+    color: darkgrey;
+}
+
+.plus {
+    /* font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%; */
+    cursor: pointer;
+    z-index: 999;
+    /* border: 1px solid #000;
+    /* background-color: #000; */
+    padding: 0 10px; */
+}
+
+.custom-file-label {
+    z-index: 999;
+    cursor: pointer;
+}
+
+header {
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+.profile {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

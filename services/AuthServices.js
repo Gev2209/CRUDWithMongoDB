@@ -23,8 +23,12 @@ class AuthServices {
         } else {
          comparePass = await bcrypt.compare(body.password,currentUser.password)
         }
-        return comparePass
-        
+        return {comparePass,currentUser}
+    }
+
+    async getUserLogged (id) {
+      const user = await this.model.users.findById(id);
+      return user
     }
 }
 

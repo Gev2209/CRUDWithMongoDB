@@ -12,6 +12,9 @@ class AuthController {
         res.render('login')
     }
 
+    async getUser (req, res) {
+        res.render('user')
+    }
    async getProducts (req, res) {
     res.render('product')
    } 
@@ -23,12 +26,24 @@ class AuthController {
 
 
     async postLogin (req, res) {
-        const comparePass = await req.app.locals.services.users.postLogin(req.body)
-        if (comparePass) {
-            res.redirect('/products')
+        const result = await req.app.locals.services.users.postLogin(req.body)
+        const id = result.currentUser.id
+        if (result) {
+            res.redirect(`/logged/${id}`)
         } else {
             res.json({messsage: 'Erorr'});
         }
+    }
+
+    async getUserLogged (req, res) {
+        try {
+            const user = await req.app.locals.services.users.getUserLogged(req.params.id)
+            res.status(200).render('logged',{title: 'express',user})
+        } catch (error) {
+            res.status(403).json({message: error})
+        }
+        
+
     }
 }
 

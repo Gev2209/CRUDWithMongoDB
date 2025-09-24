@@ -41,6 +41,11 @@ ul {
   width: 800px;  
   padding: 50px;
   margin: auto;
+  /* transition: all ease 3s; */
+  animation-name: pictures;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .fa-arrow-left, .fa-arrow-right {
@@ -89,7 +94,7 @@ ul {
 .shop_btn > a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 7px;
   margin: 0 10px;
   border-radius: 5px;
 }
@@ -106,13 +111,41 @@ ul {
   cursor: pointer;
 }
 .shop_product {
-  background-image: url(https://wudless.com/wp-content/uploads/2022/05/WALLPAPERS-.jpg);
+  background-image: url('./chair.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 400px;
   margin: auto;
-  height: 230px;
+  height: 240px;
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+
+
+@keyframes pictures {
+  10% {
+  background-image: url(https://cdn.wallpapersafari.com/43/82/Z9szGWV.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  30% {
+  background-image: url(https://wallpapers.com/images/hd/aesthetic-computer-4k-c9qdhe02pr84wh3a.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  50% {
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  90% {
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/827/65/320/firewatch-4k-best-wallpaper-preview.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+}
