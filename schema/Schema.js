@@ -7,8 +7,9 @@ const Schema = joi.object({
     password: joi.string()
         .pattern(new RegExp('^[a-zA-Z0-9$]+$')),
 
-    email: joi.string()
+    email: joi.string(),
         // .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
+    avatar: joi.string()  
 })
 
 

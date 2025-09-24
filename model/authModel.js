@@ -1,5 +1,6 @@
 const { Schema,model } = require("mongoose");
 const bcrypt = require('bcryptjs');
+const { required } = require("joi");
 const usersSchema = new Schema({
     name: {
         type: String,
@@ -14,6 +15,10 @@ const usersSchema = new Schema({
       type: String,
       required: [true, 'Email must be fill'],
       unique: [true, 'Email must be uniq']
+    },
+    avatarUrl: {
+      type: String,
+      required: true
     }
 })
 

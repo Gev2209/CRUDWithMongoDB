@@ -16,11 +16,12 @@
     </ul>
   </header>
   <main>
-    <form action="/auth/register" method="post">
+    <form action="/auth/register" method="post" enctype="multipart/form-data">
         <h1>REGISTRATION</h1>
         <input type="text" placeholder="Write your name" name="name">
         <input type="email" placeholder="Write your email" name="email">
         <input type="password" placeholder="Write your password" name="password">
+        <input type="file"  name="avatar">
         <button>Register</button>
     </form>
     </main>

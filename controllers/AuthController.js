@@ -20,7 +20,10 @@ class AuthController {
    } 
     async postRegister (req, res) {
         const validator = await Schema.validateAsync(req.body);
-        await req.app.locals.services.users.postRegister(validator)
+        await req.app.locals.services.users.postRegister({...validator, avatarUrl : req.file.filename})
+        console.log(req.file);
+        console.log(req.file.filename);
+        
         res.redirect('/auth/login')
     }
 
