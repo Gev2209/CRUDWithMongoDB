@@ -11,12 +11,10 @@
     <header>
       <div class="header_lists">
         <ul>
-          <li><a href="http://localhost:3000/api/user"><i class="fa-regular fa-circle-user"></i></a>  <% users.forEach((e) => {%>
-            <span>Welcome <%=e.name%></span>
-          <%})%></li>
+          <li><a href="http://localhost:3000/api/user"><i class="fa-regular fa-circle-user"></i></a></li>
         </ul>
         <ul>
-      <li><a href="http://localhost:3000/users"><i class="fa-solid fa-basket-shopping"></i></a></li>
+      <li><a href="http://localhost:3000/products"><i class="fa-solid fa-basket-shopping"></i></a></li>
       <li><a class="line" href=""></a></li>
       <li><a href="http://localhost:3000/auth/login">Login</a></li>
       <li><a href="http://localhost:3000/auth/register">Regitration</a></li>
@@ -36,19 +34,30 @@
           <div class="products">
             <li><%=e.name%></li>
             <li><%=e.email%></li>
-            <li><img src="<%=e.avatarUrl%>" alt=""></li>
             <hr>
             <div class="shop_product">
-              
+             <li><img src="<%=e.avatarUrl%>" width="350px" height="250px" alt=""></li> 
             </div>
             <hr>
             <div class="shop_btn">
                 <a class="buy_now">Buy now</a>
                 <a class="to_card">Add to card</a>
             </div>
-          </div>
-        <%})%>
+    </div>
+          <%})%>
       </div>
       </section>
+      <div class="pages">
+        <p>Pages <%= page %> / <%= totalPages %></p>
+
+        <% if (page > 1) { %>
+          <a href="/users?page=<%= page - 1 %>">Prev</a>
+        <% } %>
+        
+        <% if (page < totalPages) { %>
+          <a href="/users?page=<%= page + 1 %>">Next</a>
+        <% } %>
+        <hr>
+  </div>
   </body>
 </html>

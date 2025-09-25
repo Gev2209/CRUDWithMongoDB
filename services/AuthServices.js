@@ -6,10 +6,14 @@ class AuthServices {
  constructor (model) {
     this.model = model
  }
- async getUsers () {
-   const users = await this.model.users.find();
+ async getUsers (skip = 0, limit = 10) {
+   const users = await this.model.users.find().skip(skip).limit(limit);
    return users
  }
+
+ async countUsers () {
+  return await this.model.users.countDocuments()
+}
 
  async postRegister (body) {
       const newUser = await this.model.users(body)

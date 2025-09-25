@@ -2,8 +2,21 @@ const { Schema } = require("../schema/Schema")
 
 class AuthController {
     async getUsers (req, res) {
-        const users = await req.app.locals.services.users.getUsers()
-        res.render('index', {title: 'express',users})
+        // const users = await req.app.locals.services.users.getUsers()
+        // res.render('index', {title: 'express',users})
+        const page = parseInt(req.query.page) || 1
+        const limit = 3
+        const skip = (page - 1) * limit
+
+        const users = await req.app.locals.services.users.getUsers(skip, limit)
+        const total = await req.app.locals.services.users.countUsers()
+
+        res.render('index', {
+          title: 'express',
+          users,
+          page,
+          totalPages: Math.ceil(total / limit)
+        })
     }
     async getRegister (req, res) {
         res.render('register')

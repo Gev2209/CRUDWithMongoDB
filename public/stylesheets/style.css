@@ -3,6 +3,9 @@ body {
   margin: 0;
   background-color: rgba(183, 183, 183, 0.638);
 }
+a {
+  text-decoration: none;
+}
 li {
   list-style: none;
 }
@@ -11,7 +14,7 @@ li > a {
   text-decoration: none;
 }
 header {
-  /* padding: 5px 0 5px 0; */
+  padding: 5px 0 5px 0;
   width: 100%;
   background: #ffffff;
 }
@@ -43,7 +46,7 @@ ul {
   margin: auto;
   /* transition: all ease 3s; */
   animation-name: pictures;
-  animation-duration: 40s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -74,7 +77,7 @@ ul {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 350px);
+  /* grid-template-rows: repeat(3, 350px); */
   margin: 20px;
   text-align: center;
   gap: 10px;
@@ -111,39 +114,43 @@ ul {
   cursor: pointer;
 }
 .shop_product {
-  background-image: url('./chair.png');
+  /* background-image: url('./chair.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
   width: 400px;
   margin: auto;
   height: 240px;
+}
+
+
+.pages {
+  display: block;
+  text-align: center;
+  /* position: absolute;
+  left: 50%;
+  top: 70%; */
+}
+
+.pages > a {
+  color: black;
+  &:hover {
+    color:rgba(39, 39, 47, 0.541);
+  }
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 
 @keyframes pictures {
-  10% {
-  background-image: url(https://cdn.wallpapersafari.com/43/82/Z9szGWV.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  }
   30% {
-  background-image: url(https://wallpapers.com/images/hd/aesthetic-computer-4k-c9qdhe02pr84wh3a.jpg);
+  background-image: url(https://i0.wp.com/blog.wishkarma.com/wp-content/uploads/2024/10/walls.png?fit=1792%2C1024&ssl=1);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   }
   50% {
-  background-image: url(https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  }
-  90% {
-  background-image: url(https://c4.wallpaperflare.com/wallpaper/827/65/320/firewatch-4k-best-wallpaper-preview.jpg);
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/living-room-1-1557931775.jpg?crop=1.00xw:0.382xh;0,0.349xh&resize=640:*);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
