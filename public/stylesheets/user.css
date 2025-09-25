@@ -58,11 +58,6 @@ header > a {
     color: white;
 }
 
-.profile {
-    /* height: 90vh; */
-    }
-
-
 .profile_list {
     list-style: none;
     padding: 5px;
@@ -151,6 +146,7 @@ header > a {
 }
 
 .list_order {
+    display: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
@@ -158,9 +154,9 @@ header > a {
     margin: 10px;
 }
 
-/* .list_order > div {
-    border: 1px solid #000;
-} */
+.list_order {
+    display: none;
+}
 
 .orde_li {
     color: white;
@@ -200,4 +196,48 @@ header > a {
     background-color: rgba(209, 209, 209, 0.288);
     border-radius: 10px;
     padding: 10px;
+}
+
+.wallet_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    margin: 10px;
+    gap: 10px;
+}
+
+.wallet_list > div {
+    border: 1px solid #000;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.balance-card {
+    background-color: rgba(0, 255, 255, 0.238);
+}
+
+.methods {
+    background-color: rgba(0, 0, 255, 0.292);
+}
+
+.methods ul li {
+    list-style: none;
+} 
+
+.btn_wallet {
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: burlywood;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.history {
+    background-color: rgba(137, 43, 226, 0.238);
 }

@@ -37,8 +37,7 @@
             <h1>CART</h1>
             <hr>
             <div class="inside_cart">
-                <h2>ORDERS</h2>
-                <hr>
+                <!--Order  -->
                 <div class="list_order">
                     <div>
                         <ul class="order_lists">
@@ -70,59 +69,125 @@
                         </ul>
                     </div>
                 </div>
+                <!--Wallet  -->
+                <div class="wallet_list">
+                    <div class="balance-card">
+                        <h2>Wallet Balance</h2>
+                        <p>$245.50</p>
+                        <button  class="deposit btn_wallet">Deposit</button>
+                        <button class="withdraw btn_wallet">Withdraw</button>
+                    </div>
+
+                    <!-- Payment methods -->
+                    <div class="methods">
+                        <h3>Linked Cards</h3>
+                        <ul>
+                            <li>💳 Visa **** 1234</li>
+                            <li>💳 MasterCard **** 5678</li>
+                            <li><button class="btn_wallet">Add new card</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- Transaction history -->
+                    <div class="history">
+                        <h3>Transaction History</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025-09-26</td>
+                                    <td>Deposit</td>
+                                    <td>+ $100</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-09-20</td>
+                                    <td>Purchase</td>
+                                    <td>- $45</td>
+                                    <td>Completed</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-09-15</td>
+                                    <td>Withdrawal</td>
+                                    <td>- $50</td>
+                                    <td>Pending</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--  -->
             </div>
         </div>
     </div>
     <script>
-    const shoppingItem2 = document.querySelector('.profile_list li:nth-child(2)');
-    const shoppingItem3 = document.querySelector('.profile_list li:nth-child(3)');
-    const shoppingItem4 = document.querySelector('.profile_list li:nth-child(4)');
-    const shoppingItem5 = document.querySelector('.profile_list li:nth-child(5)');
-    const shoppingItem6 = document.querySelector('.profile_list li:nth-child(6)');
-    const cartUser = document.querySelector('.cart_user');
-    const insideCard = document.querySelector('.inside_cart');
+        const shoppingItem2 = document.querySelector('.profile_list li:nth-child(2)');
+        const shoppingItem3 = document.querySelector('.profile_list li:nth-child(3)');
+        const shoppingItem4 = document.querySelector('.profile_list li:nth-child(4)');
+        const shoppingItem5 = document.querySelector('.profile_list li:nth-child(5)');
+        const shoppingItem6 = document.querySelector('.profile_list li:nth-child(6)');
+        const cartUser = document.querySelector('.cart_user');
+        const insideCard = document.querySelector('.inside_cart');
+        const list_order = document.querySelector('.list_order');
+        const wallet_list = document.querySelector('.wallet_list');
 
-
-///////////////////////////////////////////////////
-shoppingItem2.addEventListener('mouseenter', () => {
-  cartUser.style.display = 'block';
-  insideCard.style.backgroundColor = '#5b00ff4d'
-});
-shoppingItem2.addEventListener('mouseleave', () => {
-  cartUser.style.display = 'none';
-});
-////////////////////////////////////////////////
-shoppingItem3.addEventListener('mouseenter', () => {
-  cartUser.style.display = 'block';
-  insideCard.style.backgroundColor = '#8000377a'
-});
-shoppingItem3.addEventListener('mouseleave', () => {
-  cartUser.style.display = 'none';
-});
-////////////////////////////////////////////////
-shoppingItem4.addEventListener('mouseenter', () => {
-  cartUser.style.display = 'block';
-  insideCard.style.backgroundColor = '#c5c5c573'
-});
-shoppingItem4.addEventListener('mouseleave', () => {
-  cartUser.style.display = 'none';
-});
-///////////////////////////////////////////////////
-shoppingItem5.addEventListener('mouseenter', () => {
-  cartUser.style.display = 'block';
-  insideCard.style.backgroundColor = '#c5001a73'
-});
-shoppingItem5.addEventListener('mouseleave', () => {
-  cartUser.style.display = 'none';
-});
-////////////////////////////////////////////////////
-shoppingItem6.addEventListener('mouseenter', () => {
-  cartUser.style.display = 'block';
-  insideCard.style.backgroundColor = '#ff8d007a'
-});
-shoppingItem6.addEventListener('mouseleave', () => {
-  cartUser.style.display = 'none';
-});
+        ///////////////////////////////////////////////////
+        shoppingItem2.addEventListener('mouseenter', () => {
+            cartUser.style.display = 'block';
+            insideCard.style.backgroundColor = '#5b00ff4d'
+            list_order.style.display = 'grid';
+            wallet_list.style.display = 'none'
+        });
+        shoppingItem2.addEventListener('mouseleave', () => {
+            cartUser.style.display = 'none';
+        });
+        ////////////////////////////////////////////////
+        shoppingItem3.addEventListener('mouseenter', () => {
+            cartUser.style.display = 'block';
+            insideCard.style.backgroundColor = '#8000377a'
+            list_order.style.display = 'none';
+            wallet_list.style.display = 'grid'
+        });
+        shoppingItem3.addEventListener('mouseleave', () => {
+            cartUser.style.display = 'none';
+        });
+        ////////////////////////////////////////////////
+        shoppingItem4.addEventListener('mouseenter', () => {
+            cartUser.style.display = 'block';
+            insideCard.style.backgroundColor = '#c5c5c573'
+            list_order.style.display = 'none';
+            wallet_list.style.display = 'none'
+        });
+        shoppingItem4.addEventListener('mouseleave', () => {
+            cartUser.style.display = 'none';
+        });
+        ///////////////////////////////////////////////////
+        shoppingItem5.addEventListener('mouseenter', () => {
+            cartUser.style.display = 'block';
+            insideCard.style.backgroundColor = '#c5001a73'
+            list_order.style.display = 'none';
+            wallet_list.style.display = 'none'
+        });
+        shoppingItem5.addEventListener('mouseleave', () => {
+            cartUser.style.display = 'none';
+        });
+        ////////////////////////////////////////////////////
+        shoppingItem6.addEventListener('mouseenter', () => {
+            cartUser.style.display = 'block';
+            insideCard.style.backgroundColor = '#ff8d007a'
+            list_order.style.display = 'none';
+            wallet_list.style.display = 'none'
+        });
+        shoppingItem6.addEventListener('mouseleave', () => {
+            cartUser.style.display = 'none';
+        });
     </script>
 </body>
 
