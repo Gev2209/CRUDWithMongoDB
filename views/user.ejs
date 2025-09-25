@@ -1,33 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/stylesheets/user.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <header>Profile /<a href="http://localhost:3000/">Home</a></header>
-    <ul class="profile_list">
-        <li>
-           <main class="profile" >
-        <form action="" enctype="">
-        <input type="file" id="fileInput" style="display: none;" name="avatar">
-        <label for="fileInput" class="custom-file-label"><i class="fa-regular fa-circle-user"></i><a class="plus"></label>
-        <button class="save_btn">Save</button>    
-    </form>
-</a>
-    </main>
-    </li>
-        <li>Orders <i class="fa-solid fa-basket-shopping"></i></li>
-        <li>Wallet <i class="fa-solid fa-wallet"></i></li>
-        <li>Settings <i class="fa-solid fa-gear"></i></li>
-        <li>Shopping <i class="fa-solid fa-cart-shopping"></i></li>
-        <li>Contact Info <i class="fa-solid fa-address-card"></i></li>
-    </ul>
+    <div class="all_cards">
+        <ul class="profile_list">
+            <li>
+                <main class="profile">
+                    <form action="" enctype="">
+                        <input type="file" id="fileInput" style="display: none;" name="avatar">
+                        <label for="fileInput" class="custom-file-label"><i class="fa-regular fa-circle-user"></i><a
+                                class="plus"></label>
+                        <button class="save_btn">Save</button>
+                    </form>
+                    </a>
+                </main>
+            </li>
+            <li>Orders <i class="fa-solid fa-basket-shopping"></i></li>
+            <li>Wallet <i class="fa-solid fa-wallet"></i></li>
+            <li>Settings <i class="fa-solid fa-gear"></i></li>
+            <li>Shopping <i class="fa-solid fa-cart-shopping"></i></li>
+            <li>Contact Info <i class="fa-solid fa-address-card"></i></li>
+        </ul>
+        <div class="cart_user">
+            <h1>CART</h1>
+            <hr>
+            <div class="inside_cart">
+                <h2>ORDERS</h2>
+                <hr>
+                <div class="list_order">
+                    <div>
+                        <ul class="order_lists">
+                            <li class="photo orde_li"></li>
+                            <li class="orde_li"><strong>Price:</strong> $1800</li>
+                            <li class="orde_li"><strong>Quantity:</strong> 6 pcs</li>
+                            <li class="orde_li"><strong>Date:</strong> 2025-09-26</li>
+                            <li class="orde_li"><strong>Status:</strong> Delivered</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="order_lists">
+                            <li class="photo2 orde_li"></li>
+                            <li class="orde_li"><strong>Price:</strong> $250</li>
+                            <li class="orde_li"><strong>Quantity:</strong> 2 pcs</li>
+                            <li class="orde_li"><strong>Date:</strong> 2025-11-33</li>
+                            <li class="orde_li"><strong>Status:</strong> Pending</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="order_lists">
+                            <li class="photo3 orde_li"></li>
+                            <li class="orde_li"><strong>Price:</strong> $2500</li>
+                            <li class="orde_li"><strong>Quantity:</strong> 5 pcs</li>
+                            <li class="orde_li"><strong>Date:</strong> 2025-012-05</li>
+                            <li class="orde_li"><strong>Status:</strong> shipped</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    const shoppingItem2 = document.querySelector('.profile_list li:nth-child(2)');
+    const shoppingItem3 = document.querySelector('.profile_list li:nth-child(3)');
+    const shoppingItem4 = document.querySelector('.profile_list li:nth-child(4)');
+    const shoppingItem5 = document.querySelector('.profile_list li:nth-child(5)');
+    const shoppingItem6 = document.querySelector('.profile_list li:nth-child(6)');
+    const cartUser = document.querySelector('.cart_user');
+    const insideCard = document.querySelector('.inside_cart');
+
+
+///////////////////////////////////////////////////
+shoppingItem2.addEventListener('mouseenter', () => {
+  cartUser.style.display = 'block';
+  insideCard.style.backgroundColor = '#5b00ff4d'
+});
+shoppingItem2.addEventListener('mouseleave', () => {
+  cartUser.style.display = 'none';
+});
+////////////////////////////////////////////////
+shoppingItem3.addEventListener('mouseenter', () => {
+  cartUser.style.display = 'block';
+  insideCard.style.backgroundColor = '#8000377a'
+});
+shoppingItem3.addEventListener('mouseleave', () => {
+  cartUser.style.display = 'none';
+});
+////////////////////////////////////////////////
+shoppingItem4.addEventListener('mouseenter', () => {
+  cartUser.style.display = 'block';
+  insideCard.style.backgroundColor = '#c5c5c573'
+});
+shoppingItem4.addEventListener('mouseleave', () => {
+  cartUser.style.display = 'none';
+});
+///////////////////////////////////////////////////
+shoppingItem5.addEventListener('mouseenter', () => {
+  cartUser.style.display = 'block';
+  insideCard.style.backgroundColor = '#c5001a73'
+});
+shoppingItem5.addEventListener('mouseleave', () => {
+  cartUser.style.display = 'none';
+});
+////////////////////////////////////////////////////
+shoppingItem6.addEventListener('mouseenter', () => {
+  cartUser.style.display = 'block';
+  insideCard.style.backgroundColor = '#ff8d007a'
+});
+shoppingItem6.addEventListener('mouseleave', () => {
+  cartUser.style.display = 'none';
+});
+    </script>
 </body>
+
 </html>

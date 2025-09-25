@@ -6,7 +6,12 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+}
+
+header {
+    position: fixed;
+    width: 100%;
 }
 header > a {
     margin-left: 5px;
@@ -61,7 +66,7 @@ header > a {
 .profile_list {
     list-style: none;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 40px;
 }
 
 .profile_list > li {
@@ -69,8 +74,7 @@ header > a {
     font-family: sans-serif;
     font-weight: 100;
     padding: 5px;
-    /* border: 1px solid #000; */
-    background-color: rgba(0, 26, 40, 0.882);
+    background-color: rgba(0, 26, 40, 0.5);
     width: 170px;
     cursor: pointer;
     &:nth-child(2):hover {
@@ -101,4 +105,99 @@ header > a {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.all_cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_user{
+    display: none;
+    height: 80vh;
+    min-width: 1200px;
+    margin-top: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 26, 40, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.cart_user > h1 {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.cart_user {
+    position: relative;
+}
+.inside_cart {
+    height: 60vh;
+    width: 1100px;
+    border-radius: 10px;
+    margin: auto;
+    border: 1px solid #000;
+    margin-top: 30px;
+    box-shadow: 0 10px 4px 1px rgba(0, 0, 0, 0.445);
+}
+
+.inside_cart > h2 {
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.list_order {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px;
+    margin: 10px;
+}
+
+/* .list_order > div {
+    border: 1px solid #000;
+} */
+
+.orde_li {
+    color: white;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    background-image: url(https://img.freepik.com/free-photo/empty-modern-room-with-furniture_23-2149178345.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+
+}
+
+.photo2 {
+    background-image: url(https://cdn.magicdecor.in/com/2023/09/29160820/Wooden-Wallpaper-for-Drawing-Room.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+.photo3 {
+    background-image: url(https://cdn.magicdecor.in/com/2023/10/06164946/Peacock-luxury.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+.order_lists {
+    background-color: rgba(209, 209, 209, 0.288);
+    border-radius: 10px;
+    padding: 10px;
 }
